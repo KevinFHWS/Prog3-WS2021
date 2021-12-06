@@ -61,7 +61,7 @@ void BoardRepository::initialize() {
     handleSQLError(result, errorMessage);
 
     // only if dummy data is needed ;)
-    //createDummyData();
+    createDummyData();
 }
 
 Board BoardRepository::getBoard() {
@@ -77,6 +77,7 @@ std::optional<Column> BoardRepository::getColumn(int id) {
 }
 
 std::optional<Column> BoardRepository::postColumn(std::string name, int position) {
+    // Column test(0, "hello", 2);
     throw NotImplementedException();
 }
 
