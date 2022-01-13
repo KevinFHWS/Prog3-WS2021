@@ -66,6 +66,7 @@ void BoardRepository::initialize() {
 
 Board BoardRepository::getBoard() {
     throw NotImplementedException();
+    // test commit
 }
 
 std::vector<Column> BoardRepository::getColumns() {
