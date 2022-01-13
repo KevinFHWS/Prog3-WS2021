@@ -83,6 +83,7 @@ std::optional<Column> BoardRepository::postColumn(std::string name, int position
 
 std::optional<Prog3::Core::Model::Column> BoardRepository::putColumn(int id, std::string name, int position) {
     throw NotImplementedException();
+    // test
 }
 
 void BoardRepository::deleteColumn(int id) {
