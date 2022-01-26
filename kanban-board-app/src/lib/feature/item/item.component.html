@@ -1,0 +1,10 @@
+<div class="item" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+  <input
+    #itemTitleInput
+    type="text"
+    [value]="item.title"
+    (change)="onTitleChange($event)"
+  />
+
+  <trash *ngIf="showTrash" (newClickEvent)="onDelete()"></trash>
+</div>

@@ -1,0 +1,19 @@
+<div class="board">
+  <ul *ngIf="board">
+    <li *ngFor="let column of board.columns; let i = index">
+      <column
+        [column]="column"
+        [selectedOnCreate]="newColumnIndex === i"
+        [color]="this.color"
+        (delete)="deleteColumn($event)"
+      ></column>
+    </li>
+    <li>
+      <createButton
+        backgroundColor="#d6d6d6"
+        borderRadius="10px"
+        (newClickEvent)="createNewColumn()"
+      ></createButton>
+    </li>
+  </ul>
+</div>

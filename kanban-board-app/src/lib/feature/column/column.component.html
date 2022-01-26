@@ -1,0 +1,37 @@
+<div class="column">
+  <div id="header" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+    <input
+      #columnNameInput
+      type="text"
+      [value]="this.column.name"
+      (change)="onNameChange($event)"
+    />
+
+    <trash
+      *ngIf="showTrash"
+      id="trash"
+      (newClickEvent)="onDeleteColumn()"
+    ></trash>
+  </div>
+
+  <div id="body">
+    <ul>
+      <li *ngFor="let item of column.items">
+        <item
+          [item]="item"
+          [selectedOnCreate]="item == selectedObject"
+          [color]="this.color"
+          (itemDelete)="onItemDelete($event)"
+          (itemChange)="onItemChange($event)"
+        ></item>
+      </li>
+      <li>
+        <createButton
+          backgroundColor="#ffffff"
+          borderRadius="5px"
+          (newClickEvent)="onCreateNewItem()"
+        ></createButton>
+      </li>
+    </ul>
+  </div>
+</div>
