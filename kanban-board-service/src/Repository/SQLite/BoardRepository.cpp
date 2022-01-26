@@ -33,6 +33,7 @@ BoardRepository::BoardRepository() : database(nullptr) {
 
 BoardRepository::~BoardRepository() {
     sqlite3_close(database);
+    //test
 }
 
 void BoardRepository::initialize() {
